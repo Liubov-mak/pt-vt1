@@ -1,0 +1,92 @@
+@use "../variables" as *;
+
+.header {
+  padding: 24px 0;
+
+  @media screen and (min-width: 768px){
+    padding: 32px 0;
+  }
+
+  &__container {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media screen and (min-width: 768px){
+      gap: 30px;
+    }
+    @media screen and (min-width: 1400px){
+      gap: 130px;
+      grid-template-columns: 1.5fr 1fr 1fr;
+    }
+  }
+
+  &__form {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+
+    @media screen and (min-width: 1024px){
+      max-width: 302px;
+    }
+    @media screen and (min-width: 1400px){
+      max-width: 420px;
+    }
+  }
+
+  &__input {
+    border-radius: 32px;
+    padding: 8px 56px 8px 16px;
+    width: 100%;
+    height: 100%;
+    border: none;
+
+    &::placeholder {
+      color: rgba($dark, 0.3);
+    }
+
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  &__searchBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    background-color: $light-orange;
+    border-radius: 50%;
+    padding: 10px;
+
+    svg {
+      color: $white;
+    }
+
+  }
+
+  &__logo {
+    max-width: 140px;
+    justify-self: center;
+
+    @media screen and (min-width: 768px){
+      max-width: 200px;
+    }
+  }
+
+  &__cart {
+    width: 28px;
+    height: 28px;
+    background: url("../images/cart-svg.svg") center center/ contain no-repeat;
+    justify-self: right;
+    line-height: 1.3;
+    text-align: center;
+    color: $orange;
+    padding-top: 8px;
+  }
+}
