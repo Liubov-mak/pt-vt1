@@ -1,6 +1,15 @@
 @use "../variables" as *;
 
 .hero {
+  padding: 40px 0 73px;
+
+  @media screen and (min-width: 768px){
+    padding: 40px 0;
+
+  }@media screen and (min-width: 1024px){
+    padding: 60px 0;
+  }
+
   &__heading {
     margin-bottom: 24px;
   }
@@ -12,42 +21,25 @@
     text-transform: uppercase;
     text-align: center;
     color: #607900;
-
-    /*@media screen and (min-width: 768px){
-      font-size: 58px;
-    }
-    @media screen and (min-width: 1024px){
-      font-size: 80px;
-    }
-    @media screen and (min-width: 1400px){
-      font-size: 120px;
-    }*/
   }
 
   &__subtitle {
     font-family: $second-family;
     font-style: italic;
-   /* font-size: 18px;*/
     text-align: right;
     color: #2e3514;
     font-size: clamp(18px, calc(18px + (22 * (100vw - 768px) / (1440 - 768))), 40px);
-
-    /*@media screen and (min-width: 768px){
-      font-size: 24px;
-    }
-    @media screen and (min-width: 1024px){
-      font-size: 32px;
-    }
-    @media screen and (min-width: 1400px){
-      font-size: 40px;
-    }*/
   }
 
   &__images {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 26px;
+    gap: 5px;
+
+    @media screen and (min-width: 768px){
+      gap: 26px;
+    }
   }
 
   &__image {

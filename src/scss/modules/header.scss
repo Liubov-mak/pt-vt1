@@ -11,15 +11,19 @@
     display: grid;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
-    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    grid-template-columns: 1fr;
 
     @media screen and (min-width: 768px){
-      gap: 30px;
+      gap: 32px;
     }
-    @media screen and (min-width: 1400px){
+    @media screen and (min-width: 1024px){
       gap: 130px;
       grid-template-columns: 1.5fr 1fr 1fr;
+    }
+
+    @media screen and (min-width: 1400px) {
+      grid-template-columns: 420px 1fr 1fr;
     }
   }
 
@@ -67,15 +71,18 @@
     svg {
       color: $white;
     }
-
   }
 
   &__logo {
     max-width: 140px;
-    justify-self: center;
+    order: -1;
 
     @media screen and (min-width: 768px){
       max-width: 200px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      order: 0;
     }
   }
 
@@ -88,5 +95,19 @@
     text-align: center;
     color: $orange;
     padding-top: 8px;
+    position: absolute;
+    right: 14px;
+    top: 33px;
+
+    @media screen and (min-width: 768px) {
+      right: 64px;
+      top: 50px;
+    }
+
+    @media screen and (min-width: 1024px){
+      position: relative;
+      top: 0;
+      right: 0;
+    }
   }
 }

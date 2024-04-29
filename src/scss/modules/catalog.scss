@@ -1,0 +1,36 @@
+@use "../variables" as *;
+
+.catalog {
+  &__head {
+
+  }
+
+  &__filter {
+    .radio {
+      position: absolute;
+      appearance: none;
+    }
+
+    .label {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+    .label:hover {
+      background-color: skyblue;
+    }
+
+    .radio:focus + .label {
+      background-color: pink;
+    }
+
+    .radio:checked + .label {
+      background-color: red;
+    }
+  }
+
+  &__wrapper {
+
+  }
+}

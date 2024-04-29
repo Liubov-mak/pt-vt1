@@ -14,6 +14,7 @@
     <meta name="msapplication-TileColor" content="#aadbe4">
     <meta name="msapplication-config" content="/browserconfig.xml">
     <meta name="theme-color" content="#aadbe4">
+    <link type="text/css" rel="stylesheet" href="/src/scss/index.scss" >
     <script type="module" src="/index.js" defer></script>
 </head>
 <body>
@@ -50,10 +51,30 @@
                 </figure>
             </div>
         </section>
-        <section class="subscription">
+        <section class="catalog">
             <div class="container">
+                <div class="catalog__head">
+                    <fieldset class="catalog__filter">
+                        <input class="radio" type="radio" name="test" id="item1">
+                        <label class="label" for="item1" >текст</label>
+
+                        <input class="radio" type="radio" name="test" id="item2" checked>
+                        <label class="label" for="item2" >текст</label>
+
+                        <input class="radio" type="radio" id="item3" name="test">
+                        <label class="label" for="item3">текст</label>
+                    </fieldset>
+                </div>
+                <h2 class="heading">Цветы</h2>
+                <div class="catalog__wrapper">
+                </div>
+            </div>
+        </section>
+        <section class="subscribe">
+            <div class="container">
+                <h2 class="heading">ПОдпишись на рассылку</h2>
                 <form class="subscribe__form" action="#">
-                    <input class="subscribe__input" type="text" name="subscribe" placeholder="Букет из роз"/>
+                    <input class="subscribe__input" type="email" name="subscribe" placeholder="E-mail"/>
                     <button type="submit" class="subscribe__btn">
                         <svg>
                             <use xlink:href="./public/images/sprites.svg#arrow"></use>

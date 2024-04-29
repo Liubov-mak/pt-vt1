@@ -55,6 +55,7 @@ p,
 figure,
 fieldset {
   margin: 0;
+  font-weight: inherit;
 }
 
 iframe {
@@ -87,6 +88,20 @@ body {
   }
   @media screen and (min-width: 1400px){
     padding: 0 70px;
+  }
+}
+
+.heading {
+  font-family: $second-family;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  color: #607900;
+  margin-bottom: 24px;
+  font-size: clamp(32px, calc(32px + (18 * (100vw - 768px) / (1440 - 768))), 50px);
+
+  @media screen and (min-width: 1024px){
+    margin-bottom: 40px;
   }
 }
 
