@@ -3,21 +3,36 @@
 .filter {
   &__container {
     display: flex;
-    align-items: center;
+
     justify-content: space-between;
-    gap: 30px;
+    gap: 32px;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+      gap: 12px;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   &__group-holder {
     display: flex;
-    align-items: center;
-    gap: 64px;
+    gap: 40px;
+
+    @media screen and (min-width: 768px) {
+      gap: 64px;
+    }
   }
 
   &__group {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 768px) {
+      gap: 12px;
+    }
 
     .radio {
       position: absolute;
@@ -26,24 +41,44 @@
 
     .label {
       display: inline-block;
-      padding: 16px 16px 16px 60px;
+      padding: 10px 12px 10px 42px;
       border-radius: 32px;
       background-color: $white;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 14px;
       transition: $transition;
 
+      @media screen and (min-width: 768px) {
+        padding: 16px 16px 16px 60px;
+        font-size: 18px;
+      }
+
       &_fl {
-        background: url("../images/bear.png") 16px center / contain no-repeat, $white;
-        background-size: 40px;
+        background: url("../images/bear.png") 12px center / contain no-repeat, $white;
+        background-size: 24px;
+
+        @media screen and (min-width: 768px) {
+          background: url("../images/bear.png") 16px center / contain no-repeat, $white;
+          background-size: 40px;
+        }
       }
       &_toy {
-        background: url("../images/flowers.png") 16px center / contain no-repeat, $white;
-        background-size: 40px;
+        background: url("../images/flowers.png") 12px center / contain no-repeat, $white;
+        background-size: 24px;
+
+        @media screen and (min-width: 768px) {
+          background: url("../images/flowers.png") 16px center / contain no-repeat, $white;
+          background-size: 40px;
+        }
       }
       &_cards {
-        background: url("../images/postcard.png") 16px center / contain no-repeat, $white;
-        background-size: 40px;
+        background: url("../images/postcard.png") 12px center / contain no-repeat, $white;
+        background-size: 24px;
+
+        @media screen and (min-width: 768px) {
+          background: url("../images/postcard.png") 16px center / contain no-repeat, $white;
+          background-size: 40px;
+        }
       }
     }
     .label:hover {
@@ -71,10 +106,11 @@
       position: relative;
       cursor: pointer;
       padding-right: 16px;
+      font-size: 14px;
 
-      font-size: 18px;
-      line-height: 1.3;
-      color: #2e3514;
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+      }
 
       &:after {
         content: "";
