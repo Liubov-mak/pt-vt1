@@ -14,80 +14,205 @@
     <meta name="msapplication-TileColor" content="#aadbe4">
     <meta name="msapplication-config" content="/browserconfig.xml">
     <meta name="theme-color" content="#aadbe4">
-    <link type="text/css" rel="stylesheet" href="/src/scss/index.scss" >
+    <link type="text/css" rel="stylesheet" href="/src/scss/index.scss">
     <script type="module" src="/index.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container header__container">
-            <form class="header__form" action="#">
-                <input class="header__input" type="search" name="search" placeholder="Букет из роз"/>
-                <button type="submit" class="header__searchBtn">
+<header class="header">
+    <div class="container header__container">
+        <form class="header__form" action="#">
+            <input class="header__input" type="search" name="search" placeholder="Букет из роз"/>
+            <button type="submit" class="header__searchBtn">
+                <svg>
+                    <use xlink:href="./public/images/sprites.svg#arrow"></use>
+                </svg>
+            </button>
+        </form>
+        <img class="header__logo" src="./public/images/logo.svg" alt="Логотип компании"/>
+        <button class="header__cart">0</button>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <div class="container">
+            <div class="hero__heading">
+                <h1 class="hero__title">Авторские букеты</h1>
+                <p class="hero__subtitle">и подарки</p>
+            </div>
+            <figure class="hero__images">
+                <img class="hero__image" src="./public/images/img-1.jpg" alt="Картинка секции. Букет роз"/>
+                <svg class="hero__main-image" role="img" aria-label="Картинка секции. Букет роз в белом кувшине"
+                     width="680" height="588" viewBox="0 0 680 588" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid slice">
+                    <clipPath id="hero-img">
+                        <path d="M680 112.187C680 137.954 653.568 161.688 609.146 180.61C653.568 211.682 680 250.658 680 292.973C680 335.869 652.836 375.335 607.304 406.613C652.836 425.66 680 449.692 680 475.813C680 537.649 527.777 587.776 340 587.776C152.223 587.776 0 537.649 0 475.813C0 449.692 27.1636 425.66 72.6961 406.613C27.1636 375.335 0 335.869 0 292.973C0 250.658 26.4319 211.682 70.854 180.61C26.4319 161.688 0 137.954 0 112.187C0 50.3515 152.223 0.223633 340 0.223633C527.777 0.223633 680 50.3515 680 112.187Z"
+                              fill="#D9D9D9"/>
+                    </clipPath>
+                    <image height="100%" width="100%" xlink:href="./public/images/hero-img.jpg" clip-path="url(#hero-img)"
+                           preserveAspectRatio="xMidYMid slice"/>
+                </svg>
+                <img class="hero__image" src="./public/images/img-2.jpg" alt="Картинка секции. Букет роз"/>
+            </figure>
+        </div>
+    </section>
+    <section class="filter">
+        <div class="container filter__container">
+            <fieldset class="filter__group">
+                <input class="radio" type="radio" name="test" id="item1" checked>
+                <label class="label label_fl" for="item1">Цветы</label>
+                <input class="radio" type="radio" name="test" id="item2">
+                <label class="label label_toy" for="item2">Игрушки</label>
+                <input class="radio" type="radio" id="item3" name="test">
+                <label class="label label_cards" for="item3">Открытки</label>
+            </fieldset>
+            <div class="filter__group-holder">
+                <fieldset class="filter__group">
+                    <div class="filter__choices choices">
+                        <button class="filter__choices-btn choices__btn">Цена</button>
+                        <div class="filter__choices-content choices__filter">
+                            <fieldset class="choices__box">
+                                <input type="text" placeholder="от" class="choices__input">
+                                <input type="text" placeholder="до" class="choices__input">
+                            </fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="filter__group">
+                    <div class="filter__choices choices">
+                        <button class="filter__choices-btn choices__btn">Тип товара</button>
+                        <div class="filter__choices-content choices__filter">
+                            <ul class="choices__box">
+                                <li class="choices__option">Монобукеты</li>
+                                <li class="choices__option">Авторские букеты</li>
+                                <li class="choices__option">Цветы в коробке</li>
+                                <li class="choices__option">Цветы в корзине</li>
+                                <li class="choices__option">Букеты из сухоцветов</li>
+                            </ul>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+    <section class="catalog">
+        <div class="container">
+            <h2 class="heading">Цветы</h2>
+            <ul class="catalog__wrapper">
+                <li class="catalog__item">
+                    <article class="catalog__card card">
+                        <img class="card__image" alt="" src="/images/image-1.jpg">
+                        <div class="card__content">
+                            <h3 class="card__title">Авторский букет из роз, диантусов и сухоцветов</h3>
+                            <div class="card__footer">
+                                <p class="card__date">
+                                    сегодня в 14:00
+                                </p>
+                                <button class="card__button">
+                                    <span class="card__price">3000&nbsp;₽</span>
+                                    <span class="card__btn-text">В корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalog__item">
+                    <article class="catalog__card card">
+                        <img class="card__image" alt="" src="/images/image-1.jpg">
+                        <div class="card__content">
+                            <h3 class="card__title">Авторский букет из роз, диантусов и сухоцветов Авторский букет из роз, диантусов и сухоцветов Авторский букет из роз, диантусов и сухоцветов</h3>
+                            <div class="card__footer">
+                                <p class="card__date">
+                                    сегодня в 14:00
+                                </p>
+                                <button class="card__button">
+                                    <span class="card__price">3000&nbsp;₽</span>
+                                    <span class="card__btn-text">В корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalog__item">
+                    <article class="catalog__card card">
+                        <img class="card__image" alt="" src="/images/image-1.jpg">
+                        <div class="card__content">
+                            <h3 class="card__title">Авторский букет из роз, диантусов и сухоцветов</h3>
+                            <div class="card__footer">
+                                <p class="card__date">
+                                    сегодня в 14:00
+                                </p>
+                                <button class="card__button">
+                                    <span class="card__price">3000&nbsp;₽</span>
+                                    <span class="card__btn-text">В корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="catalog__item">
+                    <article class="catalog__card card">
+                        <img class="card__image" alt="" src="/images/image-1.jpg">
+                        <div class="card__content">
+                            <h3 class="card__title">Авторский букет из роз, диантусов и сухоцветов</h3>
+                            <div class="card__footer">
+                                <p class="card__date">
+                                    сегодня в 14:00
+                                </p>
+                                <button class="card__button">
+                                    <span class="card__price">3000&nbsp;₽</span>
+                                    <span class="card__btn-text">В корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="subscribe">
+        <div class="container">
+            <h2 class="heading">ПОдпишись на рассылку</h2>
+            <form class="subscribe__form" action="#">
+                <input class="subscribe__input" type="email" name="subscribe" placeholder="E-mail"/>
+                <button type="submit" class="subscribe__btn">
                     <svg>
                         <use xlink:href="./public/images/sprites.svg#arrow"></use>
                     </svg>
                 </button>
             </form>
-            <img class="header__logo" src="./public/images/logo.svg" alt="Логотип компании"/>
-            <button class="header__cart">0</button>
         </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero__heading">
-                    <h1 class="hero__title">Авторские букеты</h1>
-                    <p class="hero__subtitle">и подарки</p>
-                </div>
-                <figure class="hero__images">
-                    <img class="hero__image" src="./public/images/img-1.jpg" alt="Картинка секции. Букет роз"/>
-                    <svg class="hero__main-image" role="img" aria-label="Картинка секции. Букет роз в белом кувшине" width="680" height="588" viewBox="0 0 680 588" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <clipPath id="hero-img">
-                            <path d="M680 112.187C680 137.954 653.568 161.688 609.146 180.61C653.568 211.682 680 250.658 680 292.973C680 335.869 652.836 375.335 607.304 406.613C652.836 425.66 680 449.692 680 475.813C680 537.649 527.777 587.776 340 587.776C152.223 587.776 0 537.649 0 475.813C0 449.692 27.1636 425.66 72.6961 406.613C27.1636 375.335 0 335.869 0 292.973C0 250.658 26.4319 211.682 70.854 180.61C26.4319 161.688 0 137.954 0 112.187C0 50.3515 152.223 0.223633 340 0.223633C527.777 0.223633 680 50.3515 680 112.187Z" fill="#D9D9D9"/>
-                        </clipPath>
-                        <image height="100%" width="100%" xlink:href="./public/images/hero-img.jpg" clip-path="url(#hero-img)"/>
-                    </svg>
-                    <img class="hero__image" src="./public/images/img-2.jpg" alt="Картинка секции. Букет роз"/>
-                </figure>
-            </div>
-        </section>
-        <section class="catalog">
-            <div class="container">
-                <div class="catalog__head">
-                    <fieldset class="catalog__filter">
-                        <input class="radio" type="radio" name="test" id="item1">
-                        <label class="label" for="item1" >текст</label>
-
-                        <input class="radio" type="radio" name="test" id="item2" checked>
-                        <label class="label" for="item2" >текст</label>
-
-                        <input class="radio" type="radio" id="item3" name="test">
-                        <label class="label" for="item3">текст</label>
-                    </fieldset>
-                </div>
-                <h2 class="heading">Цветы</h2>
-                <div class="catalog__wrapper">
-                </div>
-            </div>
-        </section>
-        <section class="subscribe">
-            <div class="container">
-                <h2 class="heading">ПОдпишись на рассылку</h2>
-                <form class="subscribe__form" action="#">
-                    <input class="subscribe__input" type="email" name="subscribe" placeholder="E-mail"/>
-                    <button type="submit" class="subscribe__btn">
-                        <svg>
-                            <use xlink:href="./public/images/sprites.svg#arrow"></use>
-                        </svg>
-                    </button>
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-
+    </section>
+</main>
+<footer class="footer">
+    <div class="container footer__container">
+        <img class="footer__logo" src="./public/images/logo.svg" alt="Логотип компании"/>
+        <address class="footer__address">
+            <a href="mailto:Mirano@gmail.com" aria-label="Mirano@gmail.com" class="footer__mail">Mirano@gmail.com</a>
+            <ul class="footer__socials">
+                <li class="footer__social">
+                    <a href="" class="footer__link">
+                        <img width="28" height="28" src="./public/images/tw.svg" alt="Картинка соцсети"/>
+                    </a>
+                </li>
+                <li class="footer__social">
+                    <a href="" class="footer__link">
+                        <img width="28" height="28" src="./public/images/yt.svg" alt="Картинка соцсети"/>
+                    </a>
+                </li>
+                <li class="footer__social">
+                    <a href="" class="footer__link">
+                        <img width="28" height="28" src="./public/images/vk.svg" alt="Картинка соцсети"/>
+                    </a>
+                </li>
+            </ul>
+        </address>
+        <div class="footer__developers">
+            <p>Проект сделан в учебных целях</p>
+            <a href="">Designer: Anastasia Ilina</a>
+            <a href="https://github.com/Liubov-mak/pt-vt1" aria-label="Developer: Liubov">Developer: Liubov</a>
         </div>
-    </footer>
+        <p class="footer__copyright">©MIRANO, 2024</p>
+    </div>
+</footer>
 </body>
 </html>

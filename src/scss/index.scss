@@ -2,7 +2,10 @@
 @use "base";
 @use "./modules/header";
 @use "./modules/hero";
+@use "./modules/filter";
 @use "./modules/subscription";
 @use "./modules/catalog";
+@use "./modules/card";
+@use "./modules/footer";
 
 @import "normalize.css";

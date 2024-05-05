@@ -1,10 +1,10 @@
 @use "../variables" as *;
 
 .subscribe {
-  padding: 0 0 100px;
+  padding: 50px 0 100px;
 
   @media screen and (min-width: 1024px){
-    padding: 0 0 140px;
+    padding: 70px 0 140px;
   }
   &__form {
     position: relative;

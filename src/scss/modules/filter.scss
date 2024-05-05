@@ -1,0 +1,92 @@
+@use "../variables" as *;
+
+.filter {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__group-holder {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .radio {
+      position: absolute;
+      appearance: none;
+    }
+
+    .label {
+      display: inline-block;
+      padding: 16px 16px 16px 60px;
+      border-radius: 32px;
+      background-color: $white;
+      cursor: pointer;
+      font-size: 18px;
+      transition: $transition;
+
+      &_fl {
+        background: url("../images/bear.png") 16px center / contain no-repeat, $white;
+        background-size: 40px;
+      }
+      &_toy {
+        background: url("../images/flowers.png") 16px center / contain no-repeat, $white;
+        background-size: 40px;
+      }
+      &_cards {
+        background: url("../images/postcard.png") 16px center / contain no-repeat, $white;
+        background-size: 40px;
+      }
+    }
+    .label:hover {
+      background-color: #d17d2f;
+      color: $white;
+    }
+
+    .radio:focus + .label {
+      background-color: #d17d2f;
+      color: $white;
+    }
+
+    .radio:checked + .label {
+      background-color: #f0a35b;
+      color: $white;
+    }
+  }
+
+  .choices {
+    &__filter {
+      display: none;
+    }
+
+    &__btn {
+      position: relative;
+      cursor: pointer;
+      padding-right: 16px;
+
+      font-size: 18px;
+      line-height: 1.3;
+      color: #2e3514;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        pointer-events: none;
+        background: url("../images/arr.svg") center / contain no-repeat;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

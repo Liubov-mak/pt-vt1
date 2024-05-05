@@ -1,36 +1,24 @@
 @use "../variables" as *;
 
 .catalog {
-  &__head {
+  padding: 40px 0 50px;
 
-  }
-
-  &__filter {
-    .radio {
-      position: absolute;
-      appearance: none;
-    }
-
-    .label {
-      display: inline-block;
-      padding: 10px 20px;
-      border: 1px solid black;
-      cursor: pointer;
-    }
-    .label:hover {
-      background-color: skyblue;
-    }
-
-    .radio:focus + .label {
-      background-color: pink;
-    }
-
-    .radio:checked + .label {
-      background-color: red;
-    }
+  @media screen and (min-width: 1024px) {
+    padding: 60px 0 70px;
   }
 
   &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 12px;
+    max-width: 970px;
+    margin: 0 auto;
 
+    @media screen and (min-width: 768px) {
+      gap: 24px 20px;
+    }
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }
