@@ -98,8 +98,20 @@
   }
 
   .choices {
+    position: relative;
+
     &__filter {
       display: none;
+      border-radius: 12px;
+      padding: 24px;
+      background-color: $white;
+      position: absolute;
+      transform: translateX(-50%);
+      top: calc(100% + 20px);
+
+      &.active {
+        display: block;
+      }
     }
 
     &__btn {
@@ -123,6 +135,33 @@
         top: 50%;
         transform: translateY(-50%);
       }
+    }
+
+    &__option {
+      font-size: 18px;
+      padding: 4px 0;
+      cursor: pointer;
+      transition: $transition;
+      white-space: nowrap;
+
+      &:hover {
+        color: #d17d2f;
+      }
+    }
+
+    .wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__input {
+      border: none;
+      border-radius: 32px;
+      padding: 8px 16px;
+      max-width: 110px;
+      height: 40px;
+      background-color: #f5f6f2;
     }
   }
 }
