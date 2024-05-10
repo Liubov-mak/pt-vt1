@@ -43,5 +43,14 @@ export const initChoices = () => {
         )
         window.addEventListener('resize', debounce(() => adjustElPosition(choicesFilter), 100))
         window.addEventListener('load', debounce(() => adjustElPosition(choicesFilter), 100))
+        document.addEventListener('click', ({target}) => {
+            let clickInside = target.closest('.choices')
+
+            if(!clickInside) {
+                choices.forEach(el => {
+                    el.querySelector('.choices__filter').classList.remove('active')
+                })
+            }
+        })
     })
 }
