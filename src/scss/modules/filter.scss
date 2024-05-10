@@ -138,11 +138,15 @@
     }
 
     &__option {
-      font-size: 18px;
+      font-size: 14px;
       padding: 4px 0;
       cursor: pointer;
       transition: $transition;
       white-space: nowrap;
+
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+      }
 
       &:hover {
         color: #d17d2f;
@@ -162,6 +166,11 @@
       max-width: 110px;
       height: 40px;
       background-color: #f5f6f2;
+      font-size: 14px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+      }
     }
   }
 }

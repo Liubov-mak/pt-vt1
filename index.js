@@ -20,11 +20,11 @@ window.addEventListener('scroll', () => {
     }
 })
 
-function adjustElPosition(element, count = 0 ) {
+function adjustElPosition(element, count = 0) {
     const rect = element.getBoundingClientRect();
     const width = window.innerWidth;
 
-    if(rect.left < 0) {
+    if (rect.left < 0) {
         element.style.left = "0";
         element.style.right = "auto"
         element.style.transform = "translateX(0)";
@@ -39,7 +39,7 @@ function adjustElPosition(element, count = 0 ) {
     }
 
     const postRect = element.getBoundingClientRect();
-    if((postRect.left < 0 || postRect.right > width) && count < 3) {
+    if ((postRect.left < 0 || postRect.right > width) && count < 3) {
         count++;
         adjustElPosition(element, count);
     }
@@ -53,6 +53,11 @@ choices.forEach(el => {
     choicesBtn.addEventListener('click', () => {
             choicesFilter.classList.toggle('active');
             adjustElPosition(choicesFilter);
+            choices.forEach(item => {
+                if (item !== el) {
+                    item.querySelector('.choices__filter').classList.remove('active')
+                }
+            }) // удаляет активный класс у предыдущего элемента
         }
     )
     window.addEventListener('resize', () => {
@@ -61,4 +66,14 @@ choices.forEach(el => {
     window.addEventListener('load', () => {
         adjustElPosition(choicesFilter);
     })
+})
+
+const cartClose = document.querySelector('.cart__close'),
+    cart = document.querySelector('.cart'),
+headerCart = document.querySelector('.header__cart');
+cartClose.addEventListener('click', () => {
+    cart.classList.remove('open')
+})
+headerCart.addEventListener('click', () => {
+    cart.classList.toggle('open')
 })
