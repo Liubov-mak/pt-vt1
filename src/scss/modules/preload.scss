@@ -1,0 +1,33 @@
+@use "../variables" as *;
+
+.preload {
+  //display: none;
+  position: absolute;
+  inset: 0;
+  background-color: rgba($dark, 0.5);
+  z-index: 999;
+  justify-content: center;
+  padding-top: 50px;
+
+  @media screen and (min-width: 768px){
+    padding-top: 200px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 5px solid $orange;
+    border-top: 5px solid $white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -7,6 +7,16 @@
     padding: 60px 0 70px;
   }
 
+  &__no-items {
+    font-size: 20px;
+    text-align: center;
+    grid-column: 1/-1;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 30px;
+    }
+  }
+
   &__holder {
     display: flex;
     gap: 20px;
