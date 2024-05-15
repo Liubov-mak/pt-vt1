@@ -54,20 +54,20 @@
       }
 
       &_fl {
-        background: url("../images/bear.png") 12px center / contain no-repeat, $white;
-        background-size: 24px;
-
-        @media screen and (min-width: 768px) {
-          background: url("../images/bear.png") 16px center / contain no-repeat, $white;
-          background-size: 40px;
-        }
-      }
-      &_toy {
         background: url("../images/flowers.png") 12px center / contain no-repeat, $white;
         background-size: 24px;
 
         @media screen and (min-width: 768px) {
           background: url("../images/flowers.png") 16px center / contain no-repeat, $white;
+          background-size: 40px;
+        }
+      }
+      &_toy {
+        background: url("../images/bear.png") 12px center / contain no-repeat, $white;
+        background-size: 24px;
+
+        @media screen and (min-width: 768px) {
+          background: url("../images/bear.png") 16px center / contain no-repeat, $white;
           background-size: 40px;
         }
       }

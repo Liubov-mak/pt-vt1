@@ -1,4 +1,5 @@
 import {API_URL} from "@/js/API.js";
+import {cartStore} from "@/js/Store.js";
 
 export const ProductCard = (product) => {
     const text = `${product.price} ₽`
@@ -19,6 +20,7 @@ export const ProductCard = (product) => {
                                 onMouseLeave={(e) => {
                                     e.target.textContent = text
                                 }}
+                                onClick={() => cartStore.addProductCart(product.id)}
                         >
                             {text}
                         </button>

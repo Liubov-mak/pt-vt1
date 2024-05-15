@@ -1,4 +1,4 @@
-import {store} from "@/js/Store.js";
+import {productStore} from "@/js/Store.js";
 import {ListType} from "@/js/ListType.jsx";
 
 export const initChoicesType = () => {
@@ -6,7 +6,7 @@ export const initChoicesType = () => {
         choicesBox = typeChoices.querySelector('.choices__box');
 
     const updateTypeChoicesVisibility = () => {
-        const categories = store.getCategories();
+        const categories = productStore.getCategories();
 
         if(categories.size) {
             typeChoices.style.display = '';
@@ -17,6 +17,6 @@ export const initChoicesType = () => {
             typeChoices.style.display = 'none';
         }
     };
-    store.subscribe(updateTypeChoicesVisibility)
+    productStore.subscribe(updateTypeChoicesVisibility)
     updateTypeChoicesVisibility();
 }
